@@ -1,0 +1,22 @@
+<div style="text-align:center">
+        <h1>
+                second component
+                Its
+                <span [style.color]="name.value==='yes'?'red':''" >
+                        {{title123}} 
+                </span>
+        </h1>
+        <br>
+        <!-- <span ng-if="isSelected(name.value)">and Angular2 is awesome !</spa<span ng-if="isSelected(name.value)">and Angular2 is awesome !</span>n> -->
+        <span [class.is-awesome]="name.value==='yes'">and Angular2 is awesome !</span>
+        <span> Is it awesome ?</span>
+        <input type="text" #name (keyup)="0"><br>
+        <button [disabled]="name.value!=='yes'">Enable only if text is YES</button>
+</div>
+<div [class.is-awesome]="names.length>1" style="text-align:left">
+        <ul>
+                <li *ngFor="let name of names">
+                        {{name}}
+                </li>
+        </ul>
+</div>
