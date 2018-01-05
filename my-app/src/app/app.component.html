@@ -4,20 +4,25 @@
     Welcome to {{ title }}!
   </h1>
   <input type="text" autoGrow/>
-  <div>
+  <div id="route" style="height:300px;">
     <ul class="nav nav-tabs">
       <li routerLinkActive = "active">
-        <a routerLink="home">home</a>
+        <a routerLink="home" style="margin-right:800px;">home</a>
       </li>
       <li routerLinkActive = "active">
-        <a routerLink="authors">authors</a> 
+        <a routerLink="authors" style="margin-right:800px;">authors</a> 
       </li>
       <li routerLinkActive = "active">
-        <a routerLink="users">users</a>
+        <a routerLink="users" style="margin-right:800px;">users</a>
+      </li>
+      <li routerLinkActive = "active">
+        <a routerLink="barchart" style="margin-right:800px;">bar-chart</a>
       </li>
     </ul>
     <router-outlet></router-outlet>
   </div>
+ 
+ <app-bar-chart *ngIf="chartData" [data]="chartData"></app-bar-chart>
  <!-- <app2></app2>
   <author></author> -->
 

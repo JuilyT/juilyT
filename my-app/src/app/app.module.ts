@@ -11,18 +11,21 @@ import { AppComponent2 } from './app.component2';
 import {AuthorComponent} from './app.author.component';
 import {AutoGrowDirective} from './auto-grow.directive';
 import { UserComponent } from './user.component';
+import { BarChartComponent } from './bar-chart/barchart.component';
 
 const appRoutes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'authors',component:AuthorComponent},
   {path:'users',component:UserComponent},
+  {path:'barchart',component:BarChartComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'**', component:PageNotFoundComponent}
 ]
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, PageNotFoundComponent, AppComponent2, AuthorComponent, UserComponent, AutoGrowDirective
+    AppComponent, HomeComponent, PageNotFoundComponent, AppComponent2, AuthorComponent, 
+    UserComponent, AutoGrowDirective, BarChartComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes,{'useHash':true}), HttpModule
